@@ -14,12 +14,32 @@ const app = express();
 // the backend server will parse json, not a form request
 app.use(bodyParser.json());
 
+//connect to Firestore
+//const Firestore = require('@google-cloud/firestore');
+
+/*const db = new Firestore({
+  projectId: 'dtc-attendee124',
+  keyFilename: '/path/to/keyfile.json',
+});*/
+
+//read data
+/*db.collection('Events').get()
+  .then((snapshot) => {
+    snapshot.forEach((doc) => {
+      console.log(doc.id, '=>', doc.data());
+    });
+  })
+  .catch((err) => {
+    console.log('Error getting documents', err);
+  });
+  */
+
 // mock events data - for a real solution this data should be coming 
 // from a cloud data store
 const mockEvents = {
     events: [
-        { title: 'an event', id: 1, description: 'something really cool' },
-        { title: 'another event', id: 2, description: 'something even cooler' }
+        { title: 'cloud native bootcamp', id: 1, description: 'something really cool', likes: 3 },
+        { title: 'another event', id: 2, description: 'something even cooler', likes: 5 }
     ]
 };
 

@@ -1,8 +1,6 @@
-<ul >
-  {{#events}}
-    <li>
-        <h2>{{ title }}</h2>
-        <p>{{ description }}</p>
-    </li>
+ {{#events}}
+        <h2><i>{{ title }}</i></h2>
+        <p><strong>{{ description }}</strong></p>
+	<i class="fas fa-thumbs-up"></i> {{likes}} Likes <br>
+        Comment <input name="title" type="text" /> <br />
   {{/events}}
-</ul>

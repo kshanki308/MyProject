@@ -6,20 +6,60 @@
   <title>Team D-Native's Website</title>
   <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <style>
+	h1 {
+		text-align: center;
+		color: purple;
+	}
+
+	h2 {
+		color: purple;
+	}
+
+	.button {
+	    background-color: white;
+	    color: teal;
+	    border: none;
+	    padding: 15px 30px;
+	    cursor: pointer;
+	    font-weight: 600;
+	}
+
+	input[type=text] {
+		  width: 70%;
+		  padding: 10px 10px;
+		  margin: 5px 0;
+		  display: inline-block;
+		  border: 1px solid #ccc;
+		  border-radius: 4px;
+		  box-sizing: border-box;
+	}
+
+	body {
+	    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	}
+  </style>
 </head>
 <body>
   <div>
-      <h1>Welcome to D-Natives event application</h1>
-    {{{body}}}
+      <h1>D-Native Events</h1>
 </div>
-<div>
-  <h2>Add an event</h2>
+
+<div style="background-color: teal; color: white; text-align: center; padding: 20px; ">
     <form action="/event" method="post">
-       title: <input name="title" type="text" /> <br />
-       description: <input name="description" type="text" /> <br />
-       <br />
-        <input type="submit" name="submit" value="submit" />
+	    <label for="title">Title</label><br />
+	    <input name="title" type="text" /> <br />
+	    <label for="description">Description</label><br />
+	    <input name="description" type="text" /> <br />
+	    <br />
+            <input type="submit" name="submit" value="Add new event" class="button" />	
     </form>
+  </div>
+
+  <div>
+	  <h2>Recently Added</h2>
+	  <br />
+	  {{{body}}}
   </div>
 </body>
 </html>
